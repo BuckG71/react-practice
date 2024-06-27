@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.editable-item {
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  position: relative; /* Position relative for tooltip positioning */
+}
+
+.editable-item:hover {
+  background-color: #f0f0f0; /* Highlight background color on hover */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px; /* Space between text and tooltip */
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the element */
+  left: 50%;
+  margin-left: -50px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.9em; /* Match the font size of the item text */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Delete button styling */
+.delete-button {
+  visibility: hidden; /* Hide the delete button by default */
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+}
+
+.editable-item:hover .delete-button {
+  visibility: visible; /* Show the delete button on hover */
+}
+
+/* Edit button styling */
+.edit-button {
+  visibility: hidden; /* Hide the edit button by default */
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.editable-item:hover .edit-button {
+  visibility: visible; /* Show the edit button on hover */
+}
+
+.spaced-button {
+  margin-left: 10px;
+}
